@@ -1,6 +1,6 @@
 var express=require('express');
 var app=express();
-var port=8081;
+var port= process.env.PORT || 8081;
 
 var mongo=require('mongodb');
 const Mongoclient=mongo.MongoClient;
