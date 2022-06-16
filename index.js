@@ -8,9 +8,7 @@ const mongoUrl='mongodb+srv://knyhago:kenny@cluster0.2kzve.mongodb.net/?retryWri
 var condition;
 
 
-const cors = require('cors');
 
-app.use(cors());
 
 
 
