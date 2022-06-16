@@ -1,11 +1,19 @@
 var express=require('express');
 var app=express();
-var port=8081;
+var port=process.env.PORT || 8080;
 
 var mongo=require('mongodb');
 const Mongoclient=mongo.MongoClient;
 const mongoUrl='mongodb+srv://knyhago:kenny@cluster0.2kzve.mongodb.net/?retryWrites=true&w=majority';
 var condition;
+
+
+const bodyParser = require('body-parser');
+const cors = require('cors');
+
+app.use(cors());
+app.use(bodyParser.urlencoded({extended:true}));
+app.use(bodyParser.json())
 
 
 app.get('/',(req,res)=>{
